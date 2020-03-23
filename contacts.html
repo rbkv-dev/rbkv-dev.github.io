@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>New Page</title>
-    <meta name="description">
+    <title>PENINSULA BAY TRUST</title>
+    <meta name="description" content="PENINSULA BAY TRUST">
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -26,8 +26,8 @@
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
     <link rel="stylesheet" href="styles/main.min.css">
   </head>
-  <body class="wrapper">
-    <section class="header"><a class="logo" href="#"><img class="logo-big" src="./img/svg/logo-big.svg" alt="logo-big"><img class="logo-small" src="./img/svg/logo-small.svg" alt="logo-big"></a>
+  <body class="contacts-page">
+    <section class="header wrapper"><a class="logo" href="#"><img class="logo-big" src="./img/svg/logo-big.svg" alt="logo-big"><img class="logo-small" src="./img/svg/logo-small.svg" alt="logo-big"></a>
       <nav class="desctop-menu">
         <ul class="desctop-menu__list">
           <li class="desctop-menu__item"><a class="desctop-menu__link" href="#">Who We Are</a></li>
@@ -46,7 +46,50 @@
         <div class="burger-menu__overlay"></div>
       </div>
     </section>
-    <script src="js/pageB.min.js"></script>
-    <script src="js/vendor.min.js"></script>
+    <div class="bg contacts-page"></div>
+    <section class="main-content contacts-page wrapper">
+      <h1 class="title">Contact Us</h1>
+    </section>
+    <section class="contact-us wrapper">
+      <div class="contact-us__info">
+        <h2 class="contact-us__title">Contact Us</h2>
+        <p class="contact-us__text">We would love to hear from you! Feel free to complete this form, or e-mail us at info@penbaytrust.com if you would like to learn more about what we do and how we might be able to help.</p>
+      </div>
+      <form class="contact-us__form">
+        <div class="contact-us__fieldset">
+          <div class="contact-us__group"><span class="contact-us__group-name">Name *</span>
+            <input class="contact-us__input" id="first-name" type="text" name="first-name" required>
+            <label class="contact-us__label" for="first-name">First name</label>
+          </div>
+          <div class="contact-us__group"><span class="contact-us__group-name">&nbsp;</span>
+            <input class="contact-us__input" id="last-name" type="text" name="last-name" required>
+            <label class="contact-us__label" for="last-name">Last name</label>
+          </div>
+        </div>
+        <div class="contact-us__fieldset">
+          <div class="contact-us__group"><span class="contact-us__group-name">Email *</span>
+            <input class="contact-us__input" id="email" type="email" name="email" required>
+          </div>
+          <div class="contact-us__group"><span class="contact-us__group-name">Subject *</span>
+            <input class="contact-us__input" id="subject" type="text" name="subject" required>
+          </div>
+        </div>
+        <div class="contact-us__fieldset">
+          <div class="contact-us__group"><span class="contact-us__group-name">Message *</span>
+            <textarea class="contact-us__textarea" id="message" name="message"></textarea>
+          </div>
+        </div>
+        <button class="contact-us__submit" type="submit">Submit</button>
+      </form>
+    </section>
+    <section class="footer wrapper">
+      <div class="location">
+        <p class="info">Peninsula Bay Trust Company, Inc.</p>
+        <p class="info">557 Airport Blvd, Suite 130</p>
+        <p class="info">Burlingame, CA 94010</p>
+      </div>
+      <div class="contacts"><a class="info" href="tel:+6506838123">(650) 683-8123</a><a class="info" href="mailto:">info@penbaytrust.com</a><a class="info" href="https://www.linkedin.com/"> <img src="./img/svg/linkedin.svg" alt="linkedin"></a></div>
+    </section>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
