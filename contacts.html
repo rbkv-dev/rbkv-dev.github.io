@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
     <section class="header wrapper"><a class="logo" href="#"><img class="logo-big" src="./img/svg/logo-big.svg" alt="logo-big"><img class="logo-small" src="./img/svg/logo-small.svg" alt="logo-big"></a>
@@ -35,7 +35,8 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <div class="burger-menu"><a class="burger-menu__button" href="#"><span class="burger-menu__lines"></span></a>
+      <div class="burger-menu">
+        <button class="burger-menu__button"><span class="burger-menu__lines"></span></button>
         <nav class="burger-menu__nav">
           <ul>
             <li><a href="#">Who We Are</a></li>
@@ -61,7 +62,7 @@
             <input class="contact-us__input" id="first-name" type="text" name="first-name" required>
             <label class="contact-us__label" for="first-name">First name</label>
           </div>
-          <div class="contact-us__group"><span class="contact-us__group-name">&nbsp;</span>
+          <div class="contact-us__group"><span class="contact-us__group-name empty">&nbsp;</span>
             <input class="contact-us__input" id="last-name" type="text" name="last-name" required>
             <label class="contact-us__label" for="last-name">Last name</label>
           </div>
@@ -75,8 +76,10 @@
           </div>
         </div>
         <div class="contact-us__fieldset">
-          <div class="contact-us__group"><span class="contact-us__group-name">Message *</span>
+          <div class="contact-us__group textarea"><span class="contact-us__group-name">Message *</span>
             <textarea class="contact-us__textarea" id="message" name="message"></textarea>
+            <input class="contact-us__attach-file" type="file" name="attach_file">
+            <label for="attach_file"> <img src="./img/svg/attach-file.svg" alt="attach-file"></label><span class="contact-us__file-name"></span><span class="contact-us__delete-file"></span>
           </div>
         </div>
         <button class="contact-us__submit" type="submit">Submit</button>
@@ -90,6 +93,6 @@
       </div>
       <div class="contacts"><a class="info" href="tel:+6506838123">(650) 683-8123</a><a class="info" href="mailto:">info@penbaytrust.com</a><a class="info" href="https://www.linkedin.com/"> <img src="./img/svg/linkedin.svg" alt="linkedin"></a></div>
     </section>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
