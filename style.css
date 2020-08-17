@@ -23,6 +23,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 580px) {
+  body {
+    justify-content: space-around;
+  }
 }
 
 main {
@@ -35,6 +42,7 @@ main {
 }
 
 div.logo {
+  margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
