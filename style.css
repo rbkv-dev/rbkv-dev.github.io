@@ -11,6 +11,11 @@
   font-size: 24px;
 }
 
+button:active,
+button:focus {
+  outline: none;
+}
+
 body {
   font-family: "Raleway", sans-serif;
   height: 100vh;
@@ -23,13 +28,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-}
-
-@media (max-width: 580px) {
-  body {
-    justify-content: space-around;
-  }
 }
 
 main {
@@ -42,11 +40,18 @@ main {
 }
 
 div.logo {
-  margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 330px;
+  height: auto;
+  padding: 0 10px;
+  margin-bottom: 5rem;
+}
+
+div.logo img {
+  width: 100%;
 }
 
 h1.logo-title {
@@ -73,7 +78,7 @@ h2.title {
   font-size: 4rem;
   text-transform: uppercase;
   color: #ffffff;
-  margin-top: 4.75rem;
+  margin-top: 0rem;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #b28d45;
 }
@@ -100,23 +105,29 @@ form.write-us {
 form.write-us input {
   border: none;
   outline: none;
-  background: #ffffff;
-  border-radius: 10px;
+  background: transparent;
   height: 54px;
-  max-width: 400px;
-  padding: 13px 29px;
+  max-width: 320px;
+  padding: 13px 0px;
+  padding-right: 29px;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
-  color: #919191;
+  color: #ffffff;
+  position: relative;
+  border-bottom: 2px solid #bd974c;
+}
+
+form.write-us input::placeholder {
+  color: #ffffff;
 }
 
 form.write-us button {
   border: none;
   outline: none;
-  background: #b28d45;
-  border-radius: 10px;
+  border: 2px solid #bd974c;
+  background: transparent;
   margin-left: 27px;
   height: 54px;
   width: 187px;
@@ -124,8 +135,17 @@ form.write-us button {
   font-weight: 500;
   font-size: 1rem;
   line-height: 28px;
-  color: #ffffff;
   cursor: pointer;
+  color: #ffffff;
+  transition: background 0.3s ease-in-out;
+}
+
+form.write-us button:hover {
+  background: #bd974c;
+}
+
+form.write-us button:active {
+  background: #bd974c;
 }
 
 div.links-wrapper {
@@ -147,110 +167,102 @@ div.animation {
   top: 0;
 }
 
-#scene-top-right {
+#scene-up-1 {
   position: absolute;
-  right: -30%;
-  bottom: -5%;
+  left: -25%;
+  top: -5%;
 }
-#scene-top-left {
+#scene-up-2 {
   position: absolute;
-  left: -26%;
-  bottom: -4%;
+  left: -25%;
+  top: -5%;
 }
-#scene-bottom-left {
+#scene-down-1 {
   position: absolute;
-  left: -15%;
-  bottom: -50%;
+  right: -40%;
+  bottom: -15%;
 }
-#scene-bottom-center {
+#scene-down-2 {
   position: absolute;
-  left: 50%;
-  bottom: -66%;
-  transform: translateX(-50%);
-  margin: 0 auto;
-}
-#scene-bottom-right {
-  position: absolute;
-  right: -15%;
-  bottom: -50%;
+  right: -40%;
+  bottom: -15%;
 }
 
 .animated-logo {
+  width: 100%;
   height: auto;
   opacity: 1;
-}
-.animated-logo.small {
-  width: 36em;
-}
-.animated-logo.big {
-  width: 27em;
 }
 
 @media (max-width: 1400px) {
   :root {
     font-size: 20px;
   }
-  #scene-bottom-center {
-    bottom: -50%;
+}
+
+@media (max-width: 1300px) {
+  #scene-up-1 {
+    position: absolute;
+    left: -35%;
+    top: -10%;
   }
-  #scene-top-left {
-    left: -32%;
+  #scene-up-2 {
+    position: absolute;
+    left: -35%;
+    top: -10%;
+  }
+  #scene-down-1 {
+    position: absolute;
+    right: -40%;
+    bottom: -25%;
+  }
+  #scene-down-2 {
+    position: absolute;
+    right: -40%;
+    bottom: -25%;
   }
 }
+
 @media (max-width: 1000px) {
-  #scene-top-left {
-    left: -50%;
-  }
-  #scene-top-right {
-    right: -45%;
-  }
-  #scene-bottom-left {
-    left: -27%;
-    bottom: -54%;
-  }
-  #scene-bottom-center {
-    bottom: -55%;
-  }
-  #scene-bottom-right {
-    right: -27%;
-    bottom: -54%;
+  .animated-logo {
+    width: 80%;
   }
 }
+
 @media (max-width: 768px) {
   :root {
     font-size: 18px;
   }
-  .animated-logo.small {
-    width: 32rem;
-  }
-  .animated-logo.big {
-    width: 26rem;
-  }
-  #scene-top-left {
-    left: -55%;
-    bottom: 0%;
-  }
-  #scene-top-right {
-    right: -55%;
-    bottom: 0%;
-  }
-  #scene-bottom-center {
-    bottom: -49%;
-  }
-  #scene-bottom-left {
-    left: -34%;
-    bottom: -44%;
-  }
-  #scene-bottom-right {
-    right: -34%;
-    bottom: -44%;
+  .animated-logo {
+    width: 100%;
   }
   form.write-us {
     flex-direction: column;
   }
   form.write-us button {
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 30px;
+    width: 100%;
+  }
+  #scene-up-1 {
+    position: absolute;
+    left: -35%;
+    top: -5%;
+  }
+  #scene-up-2 {
+    position: absolute;
+    left: -35%;
+    top: -5%;
+  }
+  #scene-down-1 {
+    position: absolute;
+    right: -40%;
+    bottom: -5%;
+  }
+  #scene-down-2 {
+    position: absolute;
+    right: -40%;
+    bottom: -5%;
   }
 }
 
@@ -258,22 +270,7 @@ div.animation {
   :root {
     font-size: 16px;
   }
-  .animated-logo.small {
-    width: 28rem;
-  }
-  .animated-logo.big {
-    width: 20rem;
-  }
-
-  #scene-bottom-left {
-    bottom: -37%;
-  }
-  #scene-bottom-right {
-    bottom: -37%;
-  }
   form.write-us input {
-    margin-left: 20px;
-    margin-right: 20px;
     font-size: 18px;
     height: 40px;
   }
@@ -281,14 +278,40 @@ div.animation {
     font-size: 18px;
     height: 40px;
   }
+  div.logo img {
+    width: 80%;
+  }
+  h2.title {
+    margin-top: 0rem;
+  }
+  div.links-wrapper {
+    margin-bottom: -1rem;
+  }
+  #scene-up-1 {
+    position: absolute;
+    left: -35%;
+    top: -5%;
+  }
+  #scene-up-2 {
+    position: absolute;
+    left: -35%;
+    top: -5%;
+  }
+  #scene-down-1 {
+    position: absolute;
+    right: -40%;
+    bottom: 0%;
+  }
+  #scene-down-2 {
+    position: absolute;
+    right: -40%;
+    bottom: 0%;
+  }
 }
 
 @media (max-width: 480px) {
   h2.title {
     font-size: 3rem;
-  }
-  div.links-wrapper {
-    margin-top: 6.2rem;
   }
 
   div.links-wrapper a {
@@ -298,34 +321,11 @@ div.animation {
     width: 40px;
     height: 40px;
   }
-  #scene-top-left {
-    left: -65%;
-  }
-  #scene-top-right {
-    right: -65%;
-  }
-  #scene-bottom-left {
-    bottom: -42%;
-  }
-  #scene-bottom-right {
-    bottom: -42%;
-  }
 }
 
 @media (max-width: 400px) {
-  #scene-top-left {
-    left: -75%;
-  }
-  #scene-top-right {
-    right: -75%;
-  }
-  #scene-bottom-left {
-    left: -54%;
-    bottom: -36%;
-  }
-  #scene-bottom-right {
-    right: -54%;
-    bottom: -36%;
+  div.logo img {
+    width: 70%;
   }
 }
 
@@ -335,35 +335,5 @@ div.animation {
   }
   p.subtitle {
     font-size: 0.75rem;
-  }
-}
-
-@media (max-height: 900px) {
-  h2.title {
-    margin-top: 3rem;
-  }
-  div.links-wrapper {
-    margin-top: 4.5rem;
-  }
-  form.write-us {
-    margin-top: 3rem;
-  }
-}
-
-@media (max-height: 800px) and (min-width: 100px) {
-  h2.title {
-    margin-top: 2rem;
-  }
-  div.links-wrapper {
-    margin-top: 4.5rem;
-  }
-  form.write-us {
-    margin-top: 2rem;
-  }
-  #scene-bottom-left {
-    bottom: -73%;
-  }
-  #scene-bottom-right {
-    bottom: -73%;
   }
 }

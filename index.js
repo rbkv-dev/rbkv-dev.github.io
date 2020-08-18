@@ -1,17 +1,14 @@
-var sceneTL = document.getElementById("scene-top-left");
-var sceneTR = document.getElementById("scene-top-right");
-var sceneBR = document.getElementById("scene-bottom-right");
-var sceneBC = document.getElementById("scene-bottom-center");
-var sceneBL = document.getElementById("scene-bottom-left");
+var sceneUp1 = document.getElementById("scene-up-1");
+var sceneUp2 = document.getElementById("scene-up-2");
+var sceneDown1 = document.getElementById("scene-down-1");
+var sceneDown2 = document.getElementById("scene-down-2");
 
-var parallaxTL = new Parallax(sceneTL);
-var parallaxTR = new Parallax(sceneTR);
-var parallaxBR = new Parallax(sceneBR);
-var parallaxBC = new Parallax(sceneBC);
-var parallaxBL = new Parallax(sceneBL);
+var parallaxUp1 = new Parallax(sceneUp1);
+var parallaxUp2 = new Parallax(sceneUp2);
+var parallaxDown1 = new Parallax(sceneDown1);
+var parallaxDown2 = new Parallax(sceneDown2);
 
-sceneTL.removeAttribute("style");
-sceneTR.removeAttribute("style");
-sceneBR.removeAttribute("style");
-sceneBC.removeAttribute("style");
-sceneBL.removeAttribute("style");
+sceneUp1.removeAttribute("style");
+sceneUp2.removeAttribute("style");
+sceneDown1.removeAttribute("style");
+sceneDown2.removeAttribute("style");
